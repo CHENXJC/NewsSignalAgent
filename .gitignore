@@ -1,0 +1,13 @@
+.venv/
+venv/
+__pycache__/
+.pytest_cache/
+*.pyc
+.env
+outputs/exports/*.csv
+outputs/reports/*.md
+outputs/*.log
+cache/rss/*.json
+logs/*.log
+.DS_Store
+Thumbs.db

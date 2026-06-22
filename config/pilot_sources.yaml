@@ -1,0 +1,12 @@
+pilot_name: "NEWS-004 Small Live Feed Pilot"
+phase: "NEWS-004"
+live_source_scope: "NEWS-004 Pilot Sources Only"
+max_total_items: 40
+default_fetch_limit: 8
+sources:
+  - sbs_news
+  - guardian_australia
+  - pbs
+  - npr
+  - techcrunch
+  - bbc

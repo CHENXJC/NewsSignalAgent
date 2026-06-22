@@ -1,0 +1,17 @@
+signal_score_weights:
+  relevance: 0.20
+  urgency: 0.15
+  business_impact: 0.20
+  policy_narrative_importance: 0.15
+  cross_source_confirmation: 0.10
+  source_strength: 0.10
+  novelty: 0.10
+
+source_group_weight_adjustments:
+  china_policy: 1.30
+  china_business: 1.10
+  australia_public: 1.20
+  australia_business: 1.15
+  us_wire: 1.20
+  us_business_tech: 1.15
+  global_cross_check: 1.10

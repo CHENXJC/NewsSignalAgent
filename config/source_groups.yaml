@@ -1,0 +1,413 @@
+source_groups:
+  china_policy:
+    description: Official and public-facing sources used to identify China policy narratives.
+    sources:
+      cctv_xinwen_lianbo:
+        display_name: CCTV Xinwen Lianbo
+        country_or_region: China
+        source_type: policy_anchor
+        source_group: china_policy
+        default_weight: 1.30
+        access_mode: public_page_future
+        notes: "China policy narrative anchor for macro, industrial, diplomatic, and official narrative signals."
+        feed_url: ""
+        api_url: ""
+        enabled: false
+        fetch_priority: 1
+        fetch_limit: 10
+        homepage_url: "https://tv.cctv.com/lm/xwlb/"
+        verified_status: needs_manual_check
+        verified_note: "No stable official RSS feed was confirmed for NEWS-004; video pages are not scraped."
+        license_or_usage_note: "Manual title and official link only; follow CCTV usage terms."
+        content_capture_policy: title_link_only
+        source_url_notes: "Official programme page retained for future manual-link workflow."
+      cctv_news:
+        display_name: CCTV News
+        country_or_region: China
+        source_type: public_mainstream
+        source_group: china_policy
+        default_weight: 1.15
+        access_mode: public_page_future
+        notes: Public news context for policy and national developments.
+      xinhua:
+        display_name: Xinhua
+        country_or_region: China
+        source_type: state_wire
+        source_group: china_policy
+        default_weight: 1.20
+        access_mode: rss_future
+        notes: Future public-feed candidate for official policy confirmation.
+        feed_url: ""
+        homepage_url: "https://www.news.cn/"
+        enabled: false
+        verified_status: disabled_no_stable_feed
+        verified_note: "The candidate English RSS URL returned HTTP 404 during NEWS-004 local verification."
+        fetch_priority: 2
+        fetch_limit: 6
+        license_or_usage_note: "Enable only after reconfirming an official public feed and its terms."
+        content_capture_policy: disabled
+        source_url_notes: "Candidate URL was not retained because it failed verification."
+      people_daily:
+        display_name: People's Daily
+        country_or_region: China
+        source_type: policy_mainstream
+        source_group: china_policy
+        default_weight: 1.18
+        access_mode: public_page_future
+        notes: Official narrative and policy interpretation context.
+      cgtn:
+        display_name: CGTN
+        country_or_region: China
+        source_type: international_public
+        source_group: china_policy
+        default_weight: 1.05
+        access_mode: rss_future
+        notes: International-facing China narrative context.
+      china_daily:
+        display_name: China Daily
+        country_or_region: China
+        source_type: international_mainstream
+        source_group: china_policy
+        default_weight: 1.00
+        access_mode: rss_future
+        notes: English-language policy and business context.
+
+  china_business:
+    description: Business, finance, industry, and market sources focused on China.
+    sources:
+      economic_daily:
+        display_name: Economic Daily
+        country_or_region: China
+        source_type: business_mainstream
+        source_group: china_business
+        default_weight: 1.10
+        access_mode: public_page_future
+        notes: Macro economy and industrial development context.
+      yicai:
+        display_name: Yicai
+        country_or_region: China
+        source_type: business_media
+        source_group: china_business
+        default_weight: 1.12
+        access_mode: manual_link_future
+        notes: Business and market reporting candidate for manual import.
+      caixin:
+        display_name: Caixin
+        country_or_region: China
+        source_type: business_media
+        source_group: china_business
+        default_weight: 1.18
+        access_mode: manual_link_future
+        notes: Use only accessible summaries or user-provided links; never bypass paywalls.
+      securities_times:
+        display_name: Securities Times
+        country_or_region: China
+        source_type: financial_media
+        source_group: china_business
+        default_weight: 1.08
+        access_mode: public_page_future
+        notes: Securities and listed-company signal context.
+      shanghai_securities_news:
+        display_name: Shanghai Securities News
+        country_or_region: China
+        source_type: financial_media
+        source_group: china_business
+        default_weight: 1.08
+        access_mode: public_page_future
+        notes: Capital-market and industry signal context.
+
+  australia_public:
+    description: Australian public and mainstream sources for local policy and social context.
+    sources:
+      abc_news:
+        display_name: ABC News
+        country_or_region: Australia
+        source_type: public_broadcaster
+        source_group: australia_public
+        default_weight: 1.20
+        access_mode: rss_future
+        notes: Public-interest and local Australian context.
+      sbs_news:
+        display_name: SBS News
+        country_or_region: Australia
+        source_type: public_broadcaster
+        source_group: australia_public
+        default_weight: 1.15
+        access_mode: rss_future
+        notes: Multicultural and national context.
+        feed_url: "https://www.sbs.com.au/news/feed"
+        homepage_url: "https://www.sbs.com.au/news"
+        enabled: true
+        verified_status: verified_official
+        verified_note: "HTTP 200 and parseable RSS confirmed locally in NEWS-004."
+        fetch_priority: 1
+        fetch_limit: 8
+        license_or_usage_note: "RSS metadata only; follow SBS terms and link to the original."
+        content_capture_policy: title_summary_link_only
+        source_url_notes: "Official SBS News feed supplied for the pilot."
+      guardian_australia:
+        display_name: Guardian Australia
+        country_or_region: Australia
+        source_type: mainstream_media
+        source_group: australia_public
+        default_weight: 1.05
+        access_mode: rss_future
+        notes: Public policy and social narrative context.
+        feed_url: "https://www.theguardian.com/australia-news/rss"
+        homepage_url: "https://www.theguardian.com/australia-news"
+        enabled: true
+        verified_status: verified_public
+        verified_note: "HTTP 200 and parseable RSS confirmed locally in NEWS-004."
+        fetch_priority: 2
+        fetch_limit: 8
+        license_or_usage_note: "RSS metadata only; do not retrieve paywalled or full article text."
+        content_capture_policy: title_summary_link_only
+        source_url_notes: "Public Australia News RSS endpoint."
+      smh:
+        display_name: Sydney Morning Herald
+        country_or_region: Australia
+        source_type: mainstream_media
+        source_group: australia_public
+        default_weight: 1.05
+        access_mode: rss_future
+        notes: Metropolitan public and business context.
+      the_age:
+        display_name: The Age
+        country_or_region: Australia
+        source_type: mainstream_media
+        source_group: australia_public
+        default_weight: 1.05
+        access_mode: rss_future
+        notes: Melbourne and national context.
+      news_com_au:
+        display_name: news.com.au
+        country_or_region: Australia
+        source_type: mainstream_media
+        source_group: australia_public
+        default_weight: 0.95
+        access_mode: public_page_future
+        notes: Broad consumer and national news signal context.
+      nine_news:
+        display_name: Nine News
+        country_or_region: Australia
+        source_type: mainstream_broadcast
+        source_group: australia_public
+        default_weight: 1.00
+        access_mode: public_page_future
+        notes: Mainstream broadcast and local context.
+
+  australia_business:
+    description: Australian business and company-focused sources.
+    sources:
+      afr:
+        display_name: Australian Financial Review
+        country_or_region: Australia
+        source_type: business_media
+        source_group: australia_business
+        default_weight: 1.18
+        access_mode: manual_link_future
+        notes: Use public summaries or manual links; never bypass paywalls.
+      business_news_australia:
+        display_name: Business News Australia
+        country_or_region: Australia
+        source_type: business_media
+        source_group: australia_business
+        default_weight: 1.05
+        access_mode: rss_future
+        notes: Company, entrepreneurship, and SME context.
+
+  us_wire:
+    description: US wire and public-interest sources for confirmation and baseline facts.
+    sources:
+      ap:
+        display_name: Associated Press
+        country_or_region: United States
+        source_type: wire
+        source_group: us_wire
+        default_weight: 1.20
+        access_mode: api_future
+        notes: Future factual cross-check source.
+      reuters:
+        display_name: Reuters
+        country_or_region: United States
+        source_type: wire
+        source_group: us_wire
+        default_weight: 1.22
+        access_mode: api_future
+        notes: Future market and global event cross-check source.
+      npr:
+        display_name: NPR
+        country_or_region: United States
+        source_type: public_media
+        source_group: us_wire
+        default_weight: 1.10
+        access_mode: rss_future
+        notes: Public-interest and social context.
+        feed_url: "https://feeds.npr.org/1002/rss.xml"
+        homepage_url: "https://www.npr.org/sections/news/"
+        enabled: true
+        verified_status: verified_official
+        verified_note: "HTTP 200 and parseable RSS confirmed locally in NEWS-004."
+        fetch_priority: 2
+        fetch_limit: 6
+        license_or_usage_note: "RSS metadata only; link to NPR originals."
+        content_capture_policy: title_summary_link_only
+        source_url_notes: "NPR News feed selected as the public-source pilot."
+      pbs:
+        display_name: PBS
+        country_or_region: United States
+        source_type: public_media
+        source_group: us_wire
+        default_weight: 1.08
+        access_mode: rss_future
+        notes: Public affairs and policy context.
+        feed_url: "https://www.pbs.org/newshour/feeds/rss/headlines"
+        homepage_url: "https://www.pbs.org/newshour/"
+        enabled: true
+        verified_status: verified_official
+        verified_note: "HTTP 200 and parseable RSS confirmed locally in NEWS-004."
+        fetch_priority: 1
+        fetch_limit: 8
+        license_or_usage_note: "RSS metadata only; link to PBS NewsHour originals."
+        content_capture_policy: title_summary_link_only
+        source_url_notes: "PBS NewsHour headlines RSS endpoint."
+
+  us_business_tech:
+    description: US business, technology, market, and mainstream sources.
+    sources:
+      cnbc:
+        display_name: CNBC
+        country_or_region: United States
+        source_type: business_media
+        source_group: us_business_tech
+        default_weight: 1.12
+        access_mode: rss_future
+        notes: Markets, companies, and technology context.
+      wsj:
+        display_name: Wall Street Journal
+        country_or_region: United States
+        source_type: business_media
+        source_group: us_business_tech
+        default_weight: 1.18
+        access_mode: manual_link_future
+        notes: Use public summaries or user-provided links; never bypass paywalls.
+      bloomberg:
+        display_name: Bloomberg
+        country_or_region: United States
+        source_type: business_media
+        source_group: us_business_tech
+        default_weight: 1.18
+        access_mode: manual_link_future
+        notes: Market context via accessible public material only.
+      nytimes:
+        display_name: New York Times
+        country_or_region: United States
+        source_type: mainstream_media
+        source_group: us_business_tech
+        default_weight: 1.05
+        access_mode: manual_link_future
+        notes: Public narrative context without paywall bypass.
+      washington_post:
+        display_name: Washington Post
+        country_or_region: United States
+        source_type: mainstream_media
+        source_group: us_business_tech
+        default_weight: 1.05
+        access_mode: manual_link_future
+        notes: Policy and public narrative context.
+      cnn:
+        display_name: CNN
+        country_or_region: United States
+        source_type: mainstream_broadcast
+        source_group: us_business_tech
+        default_weight: 1.00
+        access_mode: rss_future
+        notes: Broad mainstream narrative signal.
+      techcrunch:
+        display_name: TechCrunch
+        country_or_region: United States
+        source_type: technology_media
+        source_group: us_business_tech
+        default_weight: 1.08
+        access_mode: rss_future
+        notes: Startup and technology opportunity context.
+        feed_url: "https://techcrunch.com/feed/"
+        homepage_url: "https://techcrunch.com/"
+        enabled: true
+        verified_status: verified_public
+        verified_note: "HTTP 200 and parseable RSS confirmed locally in NEWS-004."
+        fetch_priority: 2
+        fetch_limit: 6
+        license_or_usage_note: "RSS metadata only; do not retain full article text."
+        content_capture_policy: title_summary_link_only
+        source_url_notes: "Public TechCrunch RSS endpoint."
+      the_verge:
+        display_name: The Verge
+        country_or_region: United States
+        source_type: technology_media
+        source_group: us_business_tech
+        default_weight: 1.02
+        access_mode: rss_future
+        notes: Consumer technology and platform context.
+      wired:
+        display_name: Wired
+        country_or_region: United States
+        source_type: technology_media
+        source_group: us_business_tech
+        default_weight: 1.05
+        access_mode: rss_future
+        notes: Technology trend and risk context.
+      axios:
+        display_name: Axios
+        country_or_region: United States
+        source_type: digital_mainstream
+        source_group: us_business_tech
+        default_weight: 1.05
+        access_mode: rss_future
+        notes: Concise business, policy, and technology context.
+
+  global_cross_check:
+    description: Global sources used to compare narratives and confirm cross-border signals.
+    sources:
+      reuters:
+        display_name: Reuters
+        country_or_region: Global
+        source_type: wire
+        source_group: global_cross_check
+        default_weight: 1.22
+        access_mode: api_future
+        notes: Global event and market confirmation source.
+      ap:
+        display_name: Associated Press
+        country_or_region: Global
+        source_type: wire
+        source_group: global_cross_check
+        default_weight: 1.20
+        access_mode: api_future
+        notes: Cross-country factual confirmation source.
+      bbc:
+        display_name: BBC
+        country_or_region: Global
+        source_type: public_broadcaster
+        source_group: global_cross_check
+        default_weight: 1.12
+        access_mode: rss_future
+        notes: International public-service narrative context.
+        feed_url: "https://feeds.bbci.co.uk/news/world/rss.xml"
+        homepage_url: "https://www.bbc.com/news/world"
+        enabled: true
+        verified_status: verified_official
+        verified_note: "HTTP 200 and parseable RSS confirmed locally in NEWS-004."
+        fetch_priority: 1
+        fetch_limit: 6
+        license_or_usage_note: "RSS metadata only; link to BBC originals and follow feed terms."
+        content_capture_policy: title_summary_link_only
+        source_url_notes: "BBC World News RSS selected for global cross-check."
+      financial_times:
+        display_name: Financial Times
+        country_or_region: Global
+        source_type: business_media
+        source_group: global_cross_check
+        default_weight: 1.18
+        access_mode: manual_link_future
+        notes: Use public summaries or manual links; never bypass paywalls.

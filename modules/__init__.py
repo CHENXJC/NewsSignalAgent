@@ -1,0 +1,1 @@
+"""NewsSignalAgent local analysis modules."""
