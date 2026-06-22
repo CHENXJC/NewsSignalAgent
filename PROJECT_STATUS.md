@@ -1,6 +1,6 @@
 # Project Status
 
-Current checkpoint: **NEWS-007 - Screenshot Capture, GitHub Public Repository Preparation, and Final Safety Review**
+Current checkpoint: **NEWS-007B-COMPLETE - Local Git Author Config and Public Showcase Commit**
 
 ## Completed milestones
 
@@ -10,6 +10,7 @@ Current checkpoint: **NEWS-007 - Screenshot Capture, GitHub Public Repository Pr
 - NEWS-005: neutral Narrative Gap Detector, topic-region matrix, and report export
 - NEWS-006: dashboard polish, public README, showcase notes, release checklist, and safety tooling
 - NEWS-007: eight real dashboard screenshots, screenshot/README validators, GitHub release guide, and local Git preparation
+- NEWS-007B: repository-local Git identity, final safety validation, and local public showcase commit
 
 ## Screenshot status
 
@@ -17,7 +18,7 @@ All eight required PNG files exist under `portfolio/showcase_screenshots/`, are 
 
 ## Git and safety status
 
-Git is initialized locally on `main` with no remote and no push. Public-safe files are staged, but the NEWS-007 commit is pending because this repository has no configured `user.name` or `user.email`; no global Git configuration was changed. Runtime RSS cache JSON, generated reports/exports, logs, `.env`, virtual environments, and Python caches remain ignored and untracked.
+Git is initialized locally on `main` with repository-local author `CHENXJC <chenxjc@users.noreply.github.com>`. The public showcase commit was created as `e7a2983`; no global Git identity was changed, no remote exists, and no push was performed. Runtime RSS cache JSON, generated reports/exports, logs, `.env`, virtual environments, and Python caches remain ignored and untracked.
 
 ## Run and validate
 
@@ -38,4 +39,4 @@ Rule-based analysis is mainly English-focused; live China sources remain disable
 
 ## Next action required
 
-Configure an appropriate Git author identity (prefer repository-local settings if desired), create the prepared local commit, then continue to NEWS-008 for the explicitly authorized GitHub remote/push and online README verification.
+Continue to NEWS-008 for the explicitly authorized GitHub remote/push, online README screenshot verification, About/topics setup, and optional profile pin.
