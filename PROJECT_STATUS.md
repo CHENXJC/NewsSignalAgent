@@ -1,6 +1,6 @@
 # Project Status
 
-Current checkpoint: **NEWS-007B-COMPLETE - Local Git Author Config and Public Showcase Commit**
+Current checkpoint: **NEWS-008-COMPLETE - GitHub Public Showcase Published and Verified**
 
 ## Completed milestones
 
@@ -11,6 +11,7 @@ Current checkpoint: **NEWS-007B-COMPLETE - Local Git Author Config and Public Sh
 - NEWS-006: dashboard polish, public README, showcase notes, release checklist, and safety tooling
 - NEWS-007: eight real dashboard screenshots, screenshot/README validators, GitHub release guide, and local Git preparation
 - NEWS-007B: repository-local Git identity, final safety validation, and local public showcase commit
+- NEWS-008: public GitHub repository, `main` push, online README/image verification, About/topics configuration, and final online safety review
 
 ## Screenshot status
 
@@ -18,7 +19,17 @@ All eight required PNG files exist under `portfolio/showcase_screenshots/`, are 
 
 ## Git and safety status
 
-Git is initialized locally on `main` with repository-local author `CHENXJC <chenxjc@users.noreply.github.com>`. The public showcase commit was created as `e7a2983`; no global Git identity was changed, no remote exists, and no push was performed. Runtime RSS cache JSON, generated reports/exports, logs, `.env`, virtual environments, and Python caches remain ignored and untracked.
+- GitHub repository: https://github.com/CHENXJC/NewsSignalAgent
+- Remote: `origin` (`https://github.com/CHENXJC/NewsSignalAgent.git`)
+- Branch: `main`
+- Latest verified content/status commit before this completion update: `a588e20`
+- Online README: verified at repository root
+- Online screenshots: 8/8 render at 1440x900
+- About description and 10 recommended topics: configured
+- Online unsafe-file scan: 0 unsafe paths; `.env`, RSS cache JSON, generated reports/exports, logs, `.venv`, and Python caches are absent
+- Profile Pin: awaiting manual replacement choice because the profile already has six pinned repositories
+
+Repository-local author remains `CHENXJC <chenxjc@users.noreply.github.com>`; global Git identity was not changed.
 
 ## Run and validate
 
@@ -37,6 +48,6 @@ python -m streamlit run app.py
 
 Rule-based analysis is mainly English-focused; live China sources remain disabled; the RSS pilot is deliberately small; source availability can change; outputs are not financial or political advice.
 
-## Next action required
+## Final project state
 
-Continue to NEWS-008 for the explicitly authorized GitHub remote/push, online README screenshot verification, About/topics setup, and optional profile pin.
+GitHub Public Showcase is complete and the project is paused. The only remaining manual action is choosing which existing profile pin to replace with NewsSignalAgent, then confirming the public card displays its description and Python language.

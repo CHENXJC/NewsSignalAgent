@@ -122,8 +122,8 @@ The safety script is read-only. It reports local secrets, generated cache/report
 
 ## Roadmap
 
-- **Current:** NEWS-006 - dashboard polish and public showcase preparation
-- **Next:** NEWS-007 - real screenshot capture, GitHub public repository preparation, and final safety review
+- **Current:** NEWS-008 - GitHub public showcase published and verified
+- **Status:** Project paused after public README, screenshot, metadata, and safety verification
 - **Later:** optional schema-validated LLM analysis, evaluation datasets, watchlists, and trend history
 
 ## Disclaimer
