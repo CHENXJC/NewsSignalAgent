@@ -1,0 +1,165 @@
+{
+  "agent_id": "news_signal_agent",
+  "agent_name": "NewsSignalAgent",
+  "category": "news_intelligence",
+  "project_type": "Agent",
+  "description": "News signal analysis Agent for extracting structured insights, narrative shifts, and risk flags from public-safe news content.",
+  "project_path": "F:\\AIProjects\\NewsSignalAgent",
+  "status": "Complete",
+  "version": "NEWS-008-COMPLETE",
+  "inputs": [
+    "news_text",
+    "source_notes",
+    "topic_rules",
+    "signal_rules",
+    "demo_articles"
+  ],
+  "outputs": [
+    "signal_summary",
+    "risk_flags",
+    "structured_brief",
+    "narrative_gap_notes",
+    "dashboard_view"
+  ],
+  "actions": [
+    {
+      "action_id": "view_project_status",
+      "label": "View project status",
+      "description": "Review the local PROJECT_STATUS.md checkpoint file.",
+      "action_type": "report_view",
+      "execution_mode": "not_executable",
+      "risk_level": "low",
+      "requires_approval": false,
+      "command_template": "Open PROJECT_STATUS.md in the project folder.",
+      "runbook_ref": "docs/MANUAL_RUNBOOK.md#news-signal-agent-view-project-status",
+      "expected_output": "User can see the current checkpoint, validation status, and next stage.",
+      "safety_note": "Display/manual metadata only; AgentHub does not execute this action.",
+      "connector_required": "none",
+      "status": "display_only",
+      "enabled": true,
+      "safe_mode": true
+    },
+    {
+      "action_id": "view_agent_manifest",
+      "label": "View agent manifest",
+      "description": "Review the local agent_manifest.json metadata file.",
+      "action_type": "report_view",
+      "execution_mode": "not_executable",
+      "risk_level": "low",
+      "requires_approval": false,
+      "command_template": "Open agent_manifest.json in the project folder.",
+      "runbook_ref": "docs/MANUAL_RUNBOOK.md#news-signal-agent-view-agent-manifest",
+      "expected_output": "User can inspect declared inputs, outputs, actions, connectors, and safety mode.",
+      "safety_note": "Display/manual metadata only; AgentHub does not execute this action.",
+      "connector_required": "none",
+      "status": "display_only",
+      "enabled": true,
+      "safe_mode": true
+    },
+    {
+      "action_id": "open_project_folder",
+      "label": "Open project folder",
+      "description": "Open the local project folder manually outside AgentHub.",
+      "action_type": "local_link",
+      "execution_mode": "manual_only",
+      "risk_level": "low",
+      "requires_approval": false,
+      "command_template": "explorer \"F:\\AIProjects\\NewsSignalAgent\"",
+      "runbook_ref": "docs/MANUAL_RUNBOOK.md#news-signal-agent-open-project-folder",
+      "expected_output": "User manually opens the local project folder.",
+      "safety_note": "Display/manual metadata only; AgentHub does not execute this action.",
+      "connector_required": "none",
+      "status": "manual_ready",
+      "enabled": true,
+      "safe_mode": true
+    },
+    {
+      "action_id": "view_latest_report",
+      "label": "View latest report",
+      "description": "Review the latest public-safe sample report or exported summary.",
+      "action_type": "report_view",
+      "execution_mode": "not_executable",
+      "risk_level": "low",
+      "requires_approval": false,
+      "command_template": "Review the latest public-safe report or README demo output manually.",
+      "runbook_ref": "docs/MANUAL_RUNBOOK.md#news-signal-agent-view-latest-report",
+      "expected_output": "User can review a public-safe report or sample output reference.",
+      "safety_note": "Display/manual metadata only; AgentHub does not execute this action.",
+      "connector_required": "none",
+      "status": "display_only",
+      "enabled": true,
+      "safe_mode": true
+    },
+    {
+      "action_id": "generate_codex_prompt",
+      "label": "Generate Codex prompt",
+      "description": "Generate a copyable Codex prompt for the next safe project task.",
+      "action_type": "codex_prompt",
+      "execution_mode": "template_only",
+      "risk_level": "low",
+      "requires_approval": false,
+      "command_template": "Copy the Agent metadata into the next Codex task prompt.",
+      "runbook_ref": "docs/MANUAL_RUNBOOK.md#news-signal-agent-generate-codex-prompt",
+      "expected_output": "A copyable prompt template for the next safe Codex task.",
+      "safety_note": "Prompt is for manual copy into Codex; it does not execute project code.",
+      "connector_required": "none",
+      "status": "template_ready",
+      "enabled": true,
+      "safe_mode": true
+    }
+  ],
+  "connectors": [
+    {
+      "connector_id": "local_filesystem",
+      "label": "Local project files",
+      "status": "available_local",
+      "mode": "read_only_manifest_context",
+      "safe_mode": true
+    },
+    {
+      "connector_id": "github_showcase",
+      "label": "GitHub showcase",
+      "status": "available_link",
+      "mode": "display_only",
+      "safe_mode": true
+    },
+    {
+      "connector_id": "streamlit_local_app",
+      "label": "Streamlit local dashboard",
+      "status": "manual_launch",
+      "mode": "display_command_only",
+      "safe_mode": true
+    },
+    {
+      "connector_id": "rss_or_news_api",
+      "label": "RSS or News API",
+      "status": "optional_future",
+      "mode": "not_connected",
+      "safe_mode": true
+    },
+    {
+      "connector_id": "google_sheets",
+      "label": "Google Sheets",
+      "status": "planned",
+      "mode": "not_connected",
+      "safe_mode": true
+    }
+  ],
+  "demo_mode": true,
+  "safe_mode": true,
+  "last_run": "Not tracked yet",
+  "next_recommended_action": "Review optional profile pin decision; keep AgentHub access metadata-only.",
+  "github_repo": "https://github.com/CHENXJC/NewsSignalAgent",
+  "dashboard_url": "",
+  "tags": [
+    "Python",
+    "Streamlit",
+    "News Intelligence",
+    "Signal Analysis",
+    "Public Showcase"
+  ],
+  "owner": "BPCT / CHENXJC",
+  "public_showcase_status": "GitHub Public Showcase",
+  "pin_status": "Pin pending",
+  "action_schema_version": "HUB-V2-005"
+}

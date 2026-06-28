@@ -129,3 +129,9 @@ The safety script is read-only. It reports local secrets, generated cache/report
 ## Disclaimer
 
 NewsSignalAgent is a portfolio/demo workflow. It is not financial advice, political advice, personal investment advice, or a replacement for reading and verifying original sources.
+
+## Managed through AgentHubControlCenter
+
+This project is part of my local-first AI Agent portfolio and can be managed through [AgentHubControlCenter](https://github.com/CHENXJC/AgentHubControlCenter), the central command center for agent manifests, safe actions, useful signals, workflow simulations, connector readiness, approval gates, and public-safe reporting.
+
+NewsSignalAgent is registered as a news intelligence module in AgentHubControlCenter.
